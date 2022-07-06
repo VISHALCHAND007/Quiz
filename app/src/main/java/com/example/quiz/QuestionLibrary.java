@@ -27,6 +27,7 @@ public class QuestionLibrary {
 
     private String mAns[] = {"Narmada","Cuttack","Panini","Bhagirathi","Silver","Yoga Sutra","Rann of Kachchh","Cauvery",
                                 "Russia", "Hurricanes"};
+    private int mImage[] = {R.drawable.ques1_4,R.drawable.ques2,R.drawable.ques3,R.drawable.ques1_4,R.drawable.ques5,R.drawable.ques6,R.drawable.ques7,R.drawable.ques8,R.drawable.ques9,R.drawable.ques10,};
 
     public String getmQues(int ind) {
         return mQues[ind];
@@ -48,5 +49,8 @@ public class QuestionLibrary {
     }
     public int getSize() {
         return mQues.length;
+    }
+    public int getmImage(int ind) {
+        return mImage[ind];
     }
 }

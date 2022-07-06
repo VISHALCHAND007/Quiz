@@ -25,11 +25,13 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         updateLeft();
         updateQuestion();
+        binding.imageView3.setImageResource(mQuestionLibrary.getmImage(mQuestionNumber));
 
         //Starting with listeners
         binding.optionA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 binding.optionA.setBackgroundResource(R.drawable.border);
                 if(binding.optionA.getText().equals(mAns)) {
                     isCorrect = true;
@@ -79,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                     mAns = mQuestionLibrary.getmAns(mQuestionNumber);
                     updateLeft();
                     updateQuestion();
+                    binding.imageView3.setImageResource(mQuestionLibrary.getmImage(mQuestionNumber));
                 } else {
                     Toast.makeText(MainActivity.this, "Your score is: " + mScore + "/" + totalQues, Toast.LENGTH_SHORT).show();
                 }
